@@ -22,6 +22,7 @@ class CallBacks(dict):
              PYMUMBLE_CLBK_USERREMOVED: None,  # send the removed user object and the mumble message as parameter
              PYMUMBLE_CLBK_SOUNDRECEIVED: None,  # send the user object that received the sound and the SoundChunk object itself
              PYMUMBLE_CLBK_TEXTMESSAGERECEIVED: None,  # Send the received message
+             PYMUMBLE_CLBK_TEXTMESSAGERECEIVEDFULL: None,  # Send the received message (full object)
         } )      
             
     def set_callback(self, callback, dest):

@@ -298,6 +298,7 @@ class Mumble(threading.Thread):
             self.Log.debug("message: TextMessage : %s", mess)
 
             self.callbacks(PYMUMBLE_CLBK_TEXTMESSAGERECEIVED, mess.message)
+            self.callbacks(PYMUMBLE_CLBK_TEXTMESSAGERECEIVEDFULL, mess)
             
         elif type == PYMUMBLE_MSG_TYPES_PERMISSIONDENIED:
             mess = mumble_pb2.PermissionDenied()
